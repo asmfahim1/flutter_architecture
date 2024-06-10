@@ -5,7 +5,7 @@ import 'package:flutter_architecture/resources/assets/image_assets.dart';
 import 'package:flutter_architecture/resources/components/general_exception.dart';
 import 'package:flutter_architecture/resources/components/global_round_button.dart';
 import 'package:flutter_architecture/resources/components/internet_exception_widget.dart';
-import 'package:flutter_architecture/utils/utils.dart';
+import 'package:flutter_architecture/utils/dialogue_utils/utils.dart';
 import 'package:get/utils.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -22,41 +22,19 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    splashServices.isLogin();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('email_hint'.tr),
+        title: Text('splash'.tr),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            /*Container(
-              height: 250,
-              width: 250,
-              color: Colors.orange,
-              child: const Image(
-                image: AssetImage(
-                  ImageAssets.splashBgImage,
-                ),
-              ),
-            ),
-            GeneralExceptionWidget(
-              onPress: () {
-                Utils.toastMessage('Retry button pressed');
-              },
-            ),*/
-
-            GlobalRoundButton(
-              title: 'round button',
-              onPressed: () {
-                splashServices.isLogin();
-              },
-            ),
-          ],
+        child: Text(
+          'splash'.tr,
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
         ),
       ),
       floatingActionButton: FloatingActionButton(

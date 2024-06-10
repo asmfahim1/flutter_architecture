@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_architecture/resources/components/global_round_button.dart';
-import 'package:flutter_architecture/utils/utils.dart';
+import 'package:flutter_architecture/utils/dialogue_utils/utils.dart';
 import 'package:flutter_architecture/module/login/view_model_or_controller/login_controller.dart';
 import 'package:get/get.dart';
 
@@ -71,7 +71,7 @@ class LoginScreen extends StatelessWidget {
                 title: 'login'.tr,
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-
+                    loginController.loginMethod();
                   }
                 },
               ),

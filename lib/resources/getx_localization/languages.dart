@@ -12,6 +12,8 @@ class Language extends Translations {
       'login' : 'Login',
       'password' : 'Password',
       'loading' : 'Loading...',
+      'splash' : 'Splash',
+      'home' : 'Home',
     },
     'bn_BD' : {
       'email_hint' : 'ইমেইল প্রদান করুন',

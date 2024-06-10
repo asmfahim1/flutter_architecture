@@ -32,6 +32,7 @@ class Utils {
     String localizedTitle = title ?? 'loading'.tr;
     Get.dialog(
       Dialog(
+        backgroundColor: Colors.black,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
         ),
@@ -61,5 +62,9 @@ class Utils {
       ),
       barrierDismissible: false,
     );
+  }
+
+  static closeLoading(){
+    Get.back();
   }
 }
